@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Demo Notification</string>
+    <string name="home">Home</string>
+    <string name="notification">Notification</string>
+    <string name="recycle_view">Recycle View</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="al_msg">Do you Want Notification ? </string>
+    <string name="more_txt">Here is the notification…you can see the longer text and check expandable notification. if You Click on this notification, you can open notification page and if you click on home you can open home page</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="todo">TODO</string>
+</resources>
