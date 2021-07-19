@@ -7,26 +7,28 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class ItemAdapter(private val itemList:List<ReItem>) :RecyclerView.Adapter<ItemAdapter.ItemViewHolder>(){
+class ItemAdapter(private val itemList: List<ReItem>) :
+    RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_view,parent,false)
+        val itemView =
+            LayoutInflater.from(parent.context).inflate(R.layout.item_view, parent, false)
         return ItemViewHolder(itemView)
     }
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val currentItem = itemList[position]
         holder.imgView.setImageResource(currentItem.imgResource)
-        holder.ti1View.text= currentItem.title1
-        holder.ti2View.text= currentItem.title2
+        holder.ti1View.text = currentItem.title1
+        holder.ti2View.text = currentItem.title2
     }
 
     override fun getItemCount() = itemList.size
 
-    class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+    class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        val imgView:ImageView = itemView.findViewById(R.id.i_img)
-        val ti1View:TextView = itemView.findViewById(R.id.i_txt1)
-        val ti2View:TextView = itemView.findViewById(R.id.i_txt2)
+        val imgView: ImageView = itemView.findViewById(R.id.i_img)
+        val ti1View: TextView = itemView.findViewById(R.id.i_txt1)
+        val ti2View: TextView = itemView.findViewById(R.id.i_txt2)
 
     }
 }

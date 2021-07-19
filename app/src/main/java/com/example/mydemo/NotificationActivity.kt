@@ -25,23 +25,25 @@ class NotificationActivity : AppCompatActivity() {
         val intent = Intent(this, NotificationActivity::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         }
-        val hereIntent=Intent(this,MainActivity::class.java).apply {
+        val hereIntent = Intent(this, MainActivity::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         }
         val pendingIntent: PendingIntent = PendingIntent.getActivity(this, 0, intent, 0)
-        val herePendingIntent = PendingIntent.getActivity(this,0,hereIntent,0)
+        val herePendingIntent = PendingIntent.getActivity(this, 0, hereIntent, 0)
 
         val notBuilder = NotificationCompat.Builder(this, "2")
             .setSmallIcon(R.drawable.ic_notifications)
             .setContentTitle("My notification")
             .setContentText("Here is the notification...")
-            .setStyle(NotificationCompat.BigTextStyle()
-                .bigText(getString(R.string.more_txt)))
+            .setStyle(
+                NotificationCompat.BigTextStyle()
+                    .bigText(getString(R.string.more_txt))
+            )
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             .setContentIntent(pendingIntent)
             .setAutoCancel(true)
             .setVisibility(NotificationCompat.VISIBILITY_PRIVATE)
-            .addAction(R.drawable.ic_home,"Home",herePendingIntent)
+            .addAction(R.drawable.ic_home, "Home", herePendingIntent)
 
 
         btn.setOnClickListener {
@@ -50,15 +52,15 @@ class NotificationActivity : AppCompatActivity() {
             builder.setMessage(R.string.al_msg)
             builder.setCancelable(true)
             builder.setIcon(R.drawable.ic_notifications)
-            builder.setPositiveButton("Yes"){ _, _ ->
-                Toast.makeText(applicationContext,"Check Notification",Toast.LENGTH_LONG).show()
+            builder.setPositiveButton("Yes") { _, _ ->
+                Toast.makeText(applicationContext, "Check Notification", Toast.LENGTH_LONG).show()
                 with(NotificationManagerCompat.from(this)) {
                     notify(2, notBuilder.build())
                 }
 
             }
-            builder.setNegativeButton("No"){ _, _ ->
-                Toast.makeText(applicationContext,"Ok Fine...",Toast.LENGTH_LONG).show()
+            builder.setNegativeButton("No") { _, _ ->
+                Toast.makeText(applicationContext, "Ok Fine...", Toast.LENGTH_LONG).show()
             }
 
             val alertDialog = builder.create()
@@ -67,6 +69,7 @@ class NotificationActivity : AppCompatActivity() {
 
         }
     }
+
     private fun createNotificationChannel() {
         // Create the NotificationChannel, but only on API 26+ because
         // the NotificationChannel class is new and not in the support library

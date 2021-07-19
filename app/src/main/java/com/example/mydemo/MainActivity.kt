@@ -11,15 +11,15 @@ import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-    private lateinit var drawer:DrawerLayout
-    private lateinit var actionbar:ActionBarDrawerToggle
-    private lateinit var nav:NavigationView
+    private lateinit var drawer: DrawerLayout
+    private lateinit var actionbar: ActionBarDrawerToggle
+    private lateinit var nav: NavigationView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        nav= findViewById(R.id.nav_real)
-        drawer=findViewById(R.id.nav_menu)
-        actionbar = ActionBarDrawerToggle(this,drawer,R.string.nav_open,R.string.nav_close)
+        nav = findViewById(R.id.nav_real)
+        drawer = findViewById(R.id.nav_menu)
+        actionbar = ActionBarDrawerToggle(this, drawer, R.string.nav_open, R.string.nav_close)
         drawer.addDrawerListener(actionbar)
         actionbar.syncState()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (actionbar.onOptionsItemSelected(item)){
+        if (actionbar.onOptionsItemSelected(item)) {
             return true
         }
         return super.onOptionsItemSelected(item)
@@ -40,14 +40,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         val i1: Intent
-        when(item.itemId){
+        when (item.itemId) {
             R.id.nav_i_home -> drawer.close()
-            R.id.nav_i_notification->{
-                i1 = Intent(this,NotificationActivity::class.java)
+            R.id.nav_i_notification -> {
+                i1 = Intent(this, NotificationActivity::class.java)
                 startActivity(i1)
             }
-            R.id.nav_i_rv ->{
-                i1= Intent(this,ReViewActivity2::class.java)
+            R.id.nav_i_rv -> {
+                i1 = Intent(this, ReViewActivity2::class.java)
                 startActivity(i1)
             }
         }

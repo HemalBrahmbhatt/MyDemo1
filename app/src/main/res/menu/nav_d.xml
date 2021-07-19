@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/nav_i_home"
-        android:title="@string/home"
-        android:icon="@drawable/ic_home"/>
-    <item android:id="@+id/nav_i_notification"
-        android:title="@string/notification"
-        android:icon="@drawable/ic_notifications"/>
-    <item android:id="@+id/nav_i_rv"
-        android:title="@string/recycle_view"
-        android:icon="@drawable/ic_notes"/>
+    <item
+        android:id="@+id/nav_i_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home" />
+    <item
+        android:id="@+id/nav_i_notification"
+        android:icon="@drawable/ic_notifications"
+        android:title="@string/notification" />
+    <item
+        android:id="@+id/nav_i_rv"
+        android:icon="@drawable/ic_notes"
+        android:title="@string/recycle_view" />
 </menu>

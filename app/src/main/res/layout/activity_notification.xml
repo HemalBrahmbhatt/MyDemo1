@@ -9,6 +9,6 @@
         android:id="@+id/btn_not1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/notification"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true"
+        android:text="@string/notification" />
 </RelativeLayout>
