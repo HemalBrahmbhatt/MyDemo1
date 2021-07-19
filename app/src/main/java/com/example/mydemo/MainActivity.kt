@@ -39,16 +39,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        val i: Intent
+        val i1: Intent
         when(item.itemId){
             R.id.nav_i_home -> drawer.close()
             R.id.nav_i_notification->{
-                i = Intent(this,NotificationActivity::class.java)
-                startActivity(i)
+                i1 = Intent(this,NotificationActivity::class.java)
+                startActivity(i1)
             }
             R.id.nav_i_rv ->{
-                i= Intent(this,ReViewActivity2::class.java)
-                startActivity(i)
+                i1= Intent(this,ReViewActivity2::class.java)
+                startActivity(i1)
             }
         }
         return true
