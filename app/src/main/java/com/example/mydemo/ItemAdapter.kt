@@ -16,8 +16,8 @@ class ItemAdapter(private val itemList:List<ReItem>) :RecyclerView.Adapter<ItemA
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val currentItem = itemList[position]
         holder.imgView.setImageResource(currentItem.imgResource)
-        holder.t1View.text= currentItem.title1
-        holder.t2View.text= currentItem.title2
+        holder.ti1View.text= currentItem.title1
+        holder.ti2View.text= currentItem.title2
     }
 
     override fun getItemCount() = itemList.size
@@ -25,8 +25,8 @@ class ItemAdapter(private val itemList:List<ReItem>) :RecyclerView.Adapter<ItemA
     class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
         val imgView:ImageView = itemView.findViewById(R.id.i_img)
-        val t1View:TextView = itemView.findViewById(R.id.i_txt1)
-        val t2View:TextView = itemView.findViewById(R.id.i_txt2)
+        val ti1View:TextView = itemView.findViewById(R.id.i_txt1)
+        val ti2View:TextView = itemView.findViewById(R.id.i_txt2)
 
     }
 }

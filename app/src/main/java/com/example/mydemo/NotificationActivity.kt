@@ -31,7 +31,7 @@ class NotificationActivity : AppCompatActivity() {
         val pendingIntent: PendingIntent = PendingIntent.getActivity(this, 0, intent, 0)
         val herePendingIntent = PendingIntent.getActivity(this,0,hereIntent,0)
 
-        val notibuilder = NotificationCompat.Builder(this, "2")
+        val notBuilder = NotificationCompat.Builder(this, "2")
             .setSmallIcon(R.drawable.ic_notifications)
             .setContentTitle("My notification")
             .setContentText("Here is the notification...")
@@ -53,7 +53,7 @@ class NotificationActivity : AppCompatActivity() {
             builder.setPositiveButton("Yes"){ _, _ ->
                 Toast.makeText(applicationContext,"Check Notification",Toast.LENGTH_LONG).show()
                 with(NotificationManagerCompat.from(this)) {
-                    notify(2, notibuilder.build())
+                    notify(2, notBuilder.build())
                 }
 
             }

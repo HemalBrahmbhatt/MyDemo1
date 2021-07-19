@@ -13,7 +13,7 @@ class ReViewActivity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_re_view2)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        val iList = generateDummyList(11)
+        val iList = generateDummyList()
         val rv = findViewById<RecyclerView>(R.id.rec_view)
         val ad = ItemAdapter(iList)
         rv.adapter= ad
@@ -52,9 +52,9 @@ class ReViewActivity2 : AppCompatActivity() {
         finish()
         return super.onOptionsItemSelected(item)
     }
-    private fun generateDummyList(size: Int): ArrayList<ReItem> {
+    private fun generateDummyList(): ArrayList<ReItem> {
         val list = ArrayList<ReItem>()
-        for (i in 0 until size) {
+        for (i in 0 until 11) {
             val drawable = when (i % 3) {
                 0 -> R.drawable.ic_home
                 1 -> R.drawable.ic_notifications
