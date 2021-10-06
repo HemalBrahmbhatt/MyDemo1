@@ -13,4 +13,9 @@
         android:id="@+id/nav_i_rv"
         android:icon="@drawable/ic_notes"
         android:title="@string/recycle_view" />
+    <item
+        android:id="@+id/nav_i_dt"
+        android:icon="@drawable/ic_date"
+        android:title="@string/date_time"/>
+
 </menu>

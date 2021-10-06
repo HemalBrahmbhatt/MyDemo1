@@ -50,6 +50,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 i1 = Intent(this, ReViewActivity2::class.java)
                 startActivity(i1)
             }
+            R.id.nav_i_dt -> {
+                i1 = Intent(this, DateAndTimeActivity::class.java)
+                startActivity(i1)
+            }
         }
         return true
     }

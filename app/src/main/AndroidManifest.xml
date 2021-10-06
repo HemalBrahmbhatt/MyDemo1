@@ -14,7 +14,8 @@
         <activity android:name=".DateAndTimeActivity"/>
         <activity android:name=".ReViewActivity2" />
         <activity android:name=".NotificationActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
